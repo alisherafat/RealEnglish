@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/itemLessons"
+        android:checkable="true"
+        android:checked="true"
+        android:title="Lessons"/>
+   <!-- <item
+        android:id="@+id/posts"
+        android:checkable="true"
+        android:title="Posts"
+        />-->
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemProfile"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@mipmap/ic_avatar"
+            android:title="Profile"/>
+
+        <item
+            android:id="@+id/itemNotice"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@mipmap/notice"
+            android:title="Notifications"/>
+
+     <!--   <item
+            android:id="@+id/itemTopUser"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@mipmap/ic_score_black"
+            android:title="Top User"/>-->
+
+        <!-- <item
+             android:id="@+id/itemChat"
+             android:checkable="false"
+             android:checked="false"
+             android:icon="@mipmap/ic_chat"
+             android:title="Chat"/>-->
+        <item
+            android:id="@+id/itemAccount"
+            android:checkable="false"
+            android:checked="false"
+            android:icon="@mipmap/ic_graduate"
+            android:title="Account"/>
+
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+
+        <!-- <item
+             android:id="@+id/itemColor"
+             android:checkable="false"
+             android:icon="@mipmap/ic_color_palette"
+             android:title="Color"/>
+ -->
+        <item
+            android:id="@+id/itemShare"
+            android:checkable="false"
+            android:icon="@mipmap/ic_share"
+            android:title="Share"/>
+
+        <item
+            android:id="@+id/itemRate"
+            android:checkable="false"
+            android:icon="@mipmap/ic_star_blank"
+            android:title="Rate me 5-stars"/>
+
+        <item
+            android:id="@+id/itemAsk"
+            android:checkable="false"
+            android:icon="@mipmap/ic_ask"
+            android:title="Ask a question"/>
+
+        <!--    <item
+                android:id="@+id/itemTour"
+                android:checkable="false"
+                android:icon="@mipmap/ic_bulb"
+                android:title="Tour"/>-->
+    </group>
+
+
+</menu>

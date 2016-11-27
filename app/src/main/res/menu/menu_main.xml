@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ali_pc.myapplication.Main2Activity">
+    <!--<item-->
+        <!--android:id="@+id/action_update"-->
+        <!--android:icon="@mipmap/ic_action_add"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="Add Lesson"-->
+        <!--app:showAsAction="always" />-->
+</menu>

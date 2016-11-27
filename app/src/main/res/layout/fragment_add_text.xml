@@ -1,0 +1,68 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+
+        >
+
+
+        <EditText
+            android:id="@+id/edtBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:inputType="textMultiLine"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            />
+
+
+        <ImageView
+            android:id="@+id/imgSubmit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="centerInside"
+            app:ico_color="@color/blue"
+            app:ico_icon="gmd-add"
+            app:ico_size="24dp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+    <!--<ImageView
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:background="@drawable/quila2"
+    app:ico_color="@color/blue"
+    app:ico_icon="gmd-add"
+    app:ico_size="24dp"
+        />-->
+
+    <!-- <github.ankushsachdeva.emojicon.EmojiconEditText
+            android:id="@+id/messageText"
+            emojicon:emojiconSize="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/placeholder_message"
+            android:inputType="textMultiLine"
+            android:minHeight="50dp"
+            android:padding="10dp"
+            android:textSize="16dp"/>-->

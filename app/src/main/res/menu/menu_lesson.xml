@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ali_pc.myapplication.Main2Activity">
+    <item
+        android:id="@+id/action_pod"
+        android:icon="@mipmap/ic_headphon"
+        android:orderInCategory="1"
+        android:title="Pod"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_favorite"
+        android:orderInCategory="2"
+        android:title="Favorite"
+        app:showAsAction="always" />
+
+   <item
+        android:id="@+id/quiz"
+        android:orderInCategory="3"
+        android:title="Quiz"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/edit"
+        android:title="Edit"
+        app:showAsAction="never"
+        />
+
+    <!--  <item
+         android:id="@+id/quiz"
+         android:orderInCategory="200"
+         android:title="Quiz"
+         app:showAsAction="never" />
+
+     <item
+         android:id="@+id/actionDownloadMore"
+         android:orderInCategory="300"
+         android:title="Download more"
+         app:showAsAction="never" />-->
+
+</menu>

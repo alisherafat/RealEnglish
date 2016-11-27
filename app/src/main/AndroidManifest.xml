@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="ir.realenglish.app">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR"/>
+
+    <permission
+        android:name="ir.realenglish.app.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="ir.realenglish.app.permission.C2D_MESSAGE"/>
+
+    <application
+        android:name=".app.MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher2"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme,android:supportsRtl">
+
+        <!-- [START]  Active Android metadata -->
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="RealEnglish.db"/>
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="2"/>
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="ir.realenglish.app.model.Score,ir.realenglish.app.model.Favorite,ir.realenglish.app.model.PushNotification"/>
+
+        <!-- [END] Active Android metadata -->
+
+
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+
+                <category android:name="ir.realenglish.app"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- [END gcm_receiver] -->
+
+
+        <!-- [START services] -->
+        <service
+            android:name=".utils.gcm.GcmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".utils.gcm.GcmUtils$MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".utils.gcm.GCMIntentService"
+            android:exported="false"/>
+        <service
+            android:name=".network.MyNetworkService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <!-- [END services] -->
+
+
+        <!-- [START ACTIVITIES] -->
+        <activity
+            android:name=".view.activity.ActivityAddLesson"
+            android:label="New Lesson"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".view.Main"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.ActivityLesson"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".view.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".view.TopUserActivity"
+            android:label="@string/title_activity_top_user"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".view.TourActivity"
+            android:label="@string/title_activity_pager"
+            android:screenOrientation="portrait"/>
+        <!-- [END ACTIVITIES] -->
+        <activity
+            android:name=".view.activity.ContainerActivity"
+            android:label="@string/title_activity_container"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity
+            android:name=".view.ActivityResult"
+            android:label="@string/title_activity_result"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            >
+        </activity>
+        <activity android:name=".view.activity.ActivityPost">
+        </activity>
+        <activity
+            android:name=".view.ActivityProfile"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".view.ImageActivity">
+        </activity>
+        <activity
+            android:name=".view.activity.ActivitySearch"
+            android:label="@string/title_activity_activity_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".view.activity.ActivityQuiz"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+    </application>
+
+</manifest>
